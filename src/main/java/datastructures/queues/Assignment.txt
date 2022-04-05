@@ -1,0 +1,44 @@
+Queues (Abstract Data Type) = A list or collection with restriction or constraint having insertion at only one end (rear)
+and deletion at only one end (front).
+
+1. Design ADTQueue as with specifications (features or operations).
+2. ArrayQueue implementation of ADTQueue.
+3. CircularArrayQueue based implementation of ADTQueue.
+4. LinkedListQueue based implementation of ADTQueue.
+
+***********************************
+
+ArrayQueue ->
+
+Pros ::
+# All operations are done in constant time O(1)
+
+Cons ::
+# Unused Memory Issue -> Unused Indexes
+# Non-Restricted-Capacity based model performance issue -> array copy operation O(n)
+
+***********************************
+
+
+CircularArrayQueue ->
+
+Pros ::
+# All operations are done in constant time O(1)
+
+Cons ::
+# Partially Unused Memory Issue -> Partially Unused Indexes
+# Restricted-Capacity based model -> Limited Capacity
+
+
+***********************************
+
+
+LinkedListQueue ->
+
+Pros ::
+# All operations are done in constant time O(1)
+# No Unused Memory Issue
+# No Capacity Restriction
+
+Cons ::
+# Some extra memory is used while doing operations (but can be neglected)

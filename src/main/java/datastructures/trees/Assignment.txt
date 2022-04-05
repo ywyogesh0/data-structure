@@ -1,0 +1,71 @@
+BT -> Binary Tree
+BST -> Binary Search Tree
+log2 -> log base 2
+
+Properties :-
+
+1. Binary Tree -> Maximum 2 Children
+2. Strict/Proper Binary Tree -> Either 2 or 0 Children
+3. Height Of Binary Tree -> MAX(Height Of Left-SubTree, Height Of Right-SubTree) + 1
+
+-> Best-Case O(H) = O(log2N)
+-> Worst-Case O(H) = O(N)
+
+4. Perfect Binary Tree -> All levels must be completely filled (N -> Nodes)
+
+-> Maximum Nodes (N) At Any Level (L) = 2^L
+-> Height (H) = log2(N + 1) - 1
+-> Maximum Nodes (N) = 2^(H + 1) - 1
+
+5. Complete Binary Tree -> All levels except last level must be completely filled and nodes must be as far as left
+possible (right child can not exist without left child)
+
+-> Height (H) = Floor(log2(N))
+
+6. Binary Search Tree -> For a node, all nodes in left sub-tree must be lesser or equal and all nodes in right-subtree
+must be greater
+
+7. Balanced Binary Search Tree ->
+
+-> AVL [ Adelson-Velskii and Landis ## Inventors] = First dynamically balanced tree to be proposed.
+Like red-black tree, AVL is not perfectly balanced, but pairs of sub-trees differ in height by at most 1,
+maintaining an O(log2N) search time.
+
+l(H) -> Height Of Left SubTree
+r(H) -> Height Of Right SubTree
+
+AVL Property => |l(H) - r(H)| <= 1
+
+
+-> Red-Black Tree
+
+
+Assignment :-
+
+1. Insertion -> BST (Without Balancing) [Only Care For -> BST property]
+2. Check If BT is BST
+3. Searching -> BST
+4. Level-Order Traversal (Breadth-First Search) -> BST
+5. Pre-Order, In-Order, Post-Order Traversal (Depth-First Search) -> BST
+6. Find Min and Max Element -> BST
+7. Find Height -> BST
+8. Find In-Order Successor -> BST
+
+## case 1 : right child doesn't exist
+Solution -> left child of closest ancestor.
+
+## case 2 : right child does exist
+Solution -> go extreme left.
+
+9. Deletion -> BST (Without Balancing) [Only Care For -> BST property]
+
+## case 1 : nodeToBeDeleted is a leaf-node
+Solution -> set parent child left/right as NULL
+
+## case 2 : nodeToBeDeleted has only one child
+Solution -> simply assign deleted node child left/right to its parent
+
+## case 3 : nodeToBeDeleted has both child
+Solution ->
+## (a) find minimum node in right-subtree, save the minimum node data in temp variable  and delete it
+## (b) swap the minimum node and nodeToBeDeleted data
